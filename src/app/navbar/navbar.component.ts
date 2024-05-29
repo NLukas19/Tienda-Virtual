@@ -10,19 +10,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent{
-  usuarios= [
-    "juan",
-    "pedro",
-    "gabi"
-  ]
-
-  nombre: string = "hola";
-
-  card= {
-    titulo: "Prueba",
-    descripcion: "Bienvenido a la prueba del card"
-
-  }
-  
-
+    
 }
