@@ -1,4 +1,4 @@
-.navbarPadre {
+.navbar {
     display: flex;
     justify-content: center;
     background-color: rgb(195, 13, 13);
@@ -6,7 +6,7 @@
     height: 60px;
     border: solid black 1px;
 }
-.containerHijo{
+.container{
     display: flex;
     align-items: center;
 }
