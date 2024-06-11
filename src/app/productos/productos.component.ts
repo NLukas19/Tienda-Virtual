@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CardsComponent } from '../cards/cards.component';
 
 @Component({
@@ -9,5 +9,4 @@ import { CardsComponent } from '../cards/cards.component';
   styleUrl: './productos.component.scss'
 })
 export class ProductosComponent {
-
 }
