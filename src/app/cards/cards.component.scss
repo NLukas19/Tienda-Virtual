@@ -79,45 +79,7 @@ span{
     transform: translateY(-5px);
     }
 }
-
-.sidebar {
-    height: 100%;
-    width: 250px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background-color: rgb(195, 13, 13);
-    padding-top: 20px;
-    color: white;
-}
-
 h2{
     text-align: center;
     text-decoration: underline;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    padding: 10px 0;
-    display: block;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-li {
-    padding: 10px 0;
-    display: block;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-label {
-    display: block;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
 }
