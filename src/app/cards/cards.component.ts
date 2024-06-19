@@ -1,20 +1,36 @@
-import { Component, input,inject, OnInit } from '@angular/core';
-import { ProductsService } from '../servicios/products.service';
 import { CommonModule } from '@angular/common';
-import { response } from 'express';
+import { Component,inject,Input } from '@angular/core';
+import { UsersService } from '../servicios/users.service';
+import { ProducsArray, Product } from '../interfaces/productos';
+import { ProductsService } from '../servicios/products.service';
+import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProductDetailComponent],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.scss',
   providers:[ProductsService]
 })
-export class CardsComponent implements OnInit{
-  products$: any;
-  ngOnInit(): void {
-    this.productsSvc.getAllProducts().subscribe((response: any)=>{ this.products$=response});
-  }
-  private readonly productsSvc = inject(ProductsService);
+export class CardsComponent{
+  closeModal() {
+    this.individualProduct
+ }
+ @Input()list!: any;
+ individualProduct: any; 
+ productService= inject(ProductsService)
+ 
+ constructor(private user: UsersService){}
+ 
+ 
+ getProduct(ev : number){
+   this.productService.getIndividualProduct(ev).subscribe(res=>{
+     this.individualProduct= res.results[0]
+ 
+   }
+   )
+   
+ }
+ 
 }

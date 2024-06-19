@@ -1,39 +1,14 @@
-<div class="ContainerCards">
-    <div  *ngFor="let bodycard of products$" class="card">
-        <span>Nuevo!!</span>
-        <img  class="ImagenProductos" src="/assets/imagenes/TaladroPhilips.jpg" alt="Imagen de ejemplo">
+<div class="ContainerCards" *ngFor="let item of list">
+    <div class="card" (click)="getProduct(item.id_producto)">
+        <img  class="ImagenProductos" src="https://sistemadeventas.com.ar/api/{{item.imagen_producto}}" alt="Imagen de ejemplo">
         <div class="ContenidoCard">
-            <h2 class="TituloCard">Taladro Philips</h2>
-            <p class="DescripcionCard">Descripción breve de la tarjeta 1.</p>
+            <h2 class="TituloCard">{{item.nombre_producto}}</h2>
+            <p class="DescripcionCard">hola</p>
         </div>
         <div class="FooterCard">
             <button>Añadir al carrito</button>
         </div>
     </div>
-    <!-- <div class="card">
-        <span>Nuevo!!</span>
-        <img  class="ImagenProductos" src="/assets/imagenes/CintaMetrica.jpg" alt="Imagen de ejemplo">
-        <div class="ContenidoCard">
-            <h2 class="TituloCard">Cinta Metrica</h2>
-            <p class="DescripcionCard">Descripción breve de la tarjeta 1.</p>
-        </div>
-        <div class="FooterCard">
-            <button>Añadir al carrito</button>
-        </div>
-    </div>
-    <div class="card">
-        <span>Nuevo!!</span>
-        <img  class="ImagenProductos" src="/assets/imagenes/CascoDeConstruccion.jpg" alt="Imagen de ejemplo">
-        <div class="ContenidoCard">
-            <h2 class="TituloCard">casco de construccion</h2>
-            <p class="DescripcionCard">Descripción breve de la tarjeta 1.</p>
-        </div>
-        <div class="FooterCard">
-            <button>Añadir al carrito</button>
-        </div>
-    </div> -->
 </div>
 
-<pre>
-    {{products$ | async | json}}
-</pre>
+<app-product-detail [product]="individualProduct" (close)="closeModal()" *ngIf="individualProduct?.id_producto>0"></app-product-detail>
