@@ -9,8 +9,8 @@ import { ProductsService } from '../servicios/products.service';
   selector: 'app-productos',
   standalone: true,
   imports: [CardsComponent,CommonModule,FormsModule],
-  templateUrl: './productos.component.html',
-  styleUrl: './productos.component.scss',
+  templateUrl: '../productos/productos.component.html',
+  styleUrl: '../productos/productos.component.scss',
   providers:[ProductsService]
 })
 export class ProductosComponent implements OnInit {
@@ -34,7 +34,7 @@ export class ProductosComponent implements OnInit {
   getFileteredPruducts(){
     this.filteredData = this.data.filter((product: Product)=>{
       
-      return product.title.includes(this.searchData)
+      return product.nombre_producto.includes(this.searchData)
 
     })
   }

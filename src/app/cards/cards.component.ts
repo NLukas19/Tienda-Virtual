@@ -8,8 +8,8 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
   selector: 'app-cards',
   standalone: true,
   imports: [CommonModule, ProductDetailComponent],
-  templateUrl: './cards.component.html',
-  styleUrl: './cards.component.scss',
+  templateUrl: '../cards/cards.component.html',
+  styleUrl: '../cards/cards.component.scss',
   providers:[ProductsService]
 })
 export class CardsComponent{
