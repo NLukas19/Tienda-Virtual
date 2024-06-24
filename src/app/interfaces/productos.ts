@@ -1,12 +1,10 @@
 export interface Product {
-  categoria_id: number;
-  created_at: Date;
-  disponible: number;
-  id_producto: number;
-  imagen_producto: string;
-  nombre_producto: string;
-  precio_producto: number;
-  updated_at: Date;
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  category: string;
+  image: string;
 }
 
 export interface ProducsArray{

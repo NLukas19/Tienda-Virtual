@@ -1,9 +1,9 @@
 <div class="ContainerCards" *ngFor="let item of list">
-    <div class="card" (click)="getProduct(item.id_producto)">
-        <img  class="ImagenProductos" src="https://sistemadeventas.com.ar/api/{{item.imagen_producto}}" alt="Imagen de ejemplo">
+    <div class="card" (click)="getProduct(item.id)">
+        <img  class="ImagenProductos" src="{{item.image}}" alt="Imagen de ejemplo">
         <div class="ContenidoCard">
-            <h2 class="TituloCard">{{item.nombre_producto}}</h2>
-            <p class="DescripcionCard">hola</p>
+            <h2 class="TituloCard">{{item.title}}</h2>
+            <p class="DescripcionCard">{{item.description}}</p>
         </div>
         <div class="FooterCard">
             <button>Añadir al carrito</button>
@@ -11,4 +11,4 @@
     </div>
 </div>
 
-<app-product-detail [product]="individualProduct" (close)="closeModal()" *ngIf="individualProduct?.id_producto>0"></app-product-detail>
+<app-product-detail [product]="individualProduct" (close)="closeModal()" *ngIf="individualProduct?.id>0"></app-product-detail>
